@@ -18,10 +18,12 @@ public class Plugin: NSObject, ESDEventsProtocol {
     
     public func keyDown(forAction action: String, withContext context: Any, withPayload payload: [AnyHashable : Any], forDevice deviceID: String) {
         // Nothing to do
+        print("Key down")
     }
     
     public func keyUp(forAction action: String, withContext context: Any, withPayload payload: [AnyHashable : Any], forDevice deviceID: String) {
         // Nothing to do
+        print("Key up")
     }
     
     public func willAppear(forAction action: String, withContext context: Any, withPayload payload: [AnyHashable : Any], forDevice deviceID: String) {

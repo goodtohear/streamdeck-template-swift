@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2B1E32AB235BC1F80082122F /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1E32AA235BC1F80082122F /* Plugin.swift */; };
 		2B1E32AF235BCE8C0082122F /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1E32AE235BCE8C0082122F /* utils.swift */; };
+		ACCF11AE280467F6005F95AD /* tv.squares.beatsheet.sdPlugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACCF11A928046320005F95AD /* tv.squares.beatsheet.sdPlugin */; };
+		ACCF11B028046846005F95AD /* BeatSheetPlugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA0F7B772105CBC30028CF34 /* BeatSheetPlugin */; };
 		FA29E473215E7D2300C9F60C /* ESDConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29E46E215E7D2300C9F60C /* ESDConnectionManager.m */; };
 		FA29E474215E7D2300C9F60C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29E46F215E7D2300C9F60C /* main.m */; };
 		FA80591421623A0D00ED7E12 /* ESDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FA80591321623A0D00ED7E12 /* ESDUtilities.m */; };
@@ -36,6 +38,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		ACCF11AB280467BC005F95AD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "/Users/mf/Library/Application Support/com.elgato.StreamDeck/Plugins";
+			dstSubfolderSpec = 0;
+			files = (
+				ACCF11AE280467F6005F95AD /* tv.squares.beatsheet.sdPlugin in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCF11AF28046833005F95AD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "/Users/mf/Library/Application Support/com.elgato.StreamDeck/Plugins/tv.squares.beatsheet.sdPlugin";
+			dstSubfolderSpec = 0;
+			files = (
+				ACCF11B028046846005F95AD /* BeatSheetPlugin in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA0F7B752105CBC30028CF34 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,7 +73,8 @@
 		2B1E32A5235BB54C0082122F /* Plugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plugin-Bridging-Header.h"; sourceTree = "<group>"; };
 		2B1E32AA235BC1F80082122F /* Plugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
 		2B1E32AE235BCE8C0082122F /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
-		FA0F7B772105CBC30028CF34 /* Plugin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACCF11A928046320005F95AD /* tv.squares.beatsheet.sdPlugin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tv.squares.beatsheet.sdPlugin; sourceTree = "<group>"; };
+		FA0F7B772105CBC30028CF34 /* BeatSheetPlugin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BeatSheetPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA29E46E215E7D2300C9F60C /* ESDConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESDConnectionManager.m; sourceTree = "<group>"; };
 		FA29E46F215E7D2300C9F60C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA29E470215E7D2300C9F60C /* ESDConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESDConnectionManager.h; sourceTree = "<group>"; };
@@ -121,6 +144,7 @@
 		FA0F7B6E2105CBC30028CF34 = {
 			isa = PBXGroup;
 			children = (
+				ACCF11A928046320005F95AD /* tv.squares.beatsheet.sdPlugin */,
 				2B1E32AA235BC1F80082122F /* Plugin.swift */,
 				FA29E46D215E7D2300C9F60C /* Common */,
 				FAC7C7E42122CE1D000262E7 /* SocketRocket */,
@@ -132,7 +156,7 @@
 		FA0F7B782105CBC30028CF34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA0F7B772105CBC30028CF34 /* Plugin */,
+				FA0F7B772105CBC30028CF34 /* BeatSheetPlugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,21 +303,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA0F7B762105CBC30028CF34 /* Plugin */ = {
+		FA0F7B762105CBC30028CF34 /* BeatSheetPlugin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA0F7B7E2105CBC30028CF34 /* Build configuration list for PBXNativeTarget "Plugin" */;
+			buildConfigurationList = FA0F7B7E2105CBC30028CF34 /* Build configuration list for PBXNativeTarget "BeatSheetPlugin" */;
 			buildPhases = (
 				FA0F7B732105CBC30028CF34 /* Sources */,
 				FA0F7B742105CBC30028CF34 /* Frameworks */,
 				FA0F7B752105CBC30028CF34 /* CopyFiles */,
+				ACCF11AB280467BC005F95AD /* CopyFiles */,
+				ACCF11AF28046833005F95AD /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Plugin;
+			name = BeatSheetPlugin;
 			productName = ObjcPlugin;
-			productReference = FA0F7B772105CBC30028CF34 /* Plugin */;
+			productReference = FA0F7B772105CBC30028CF34 /* BeatSheetPlugin */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -302,7 +328,7 @@
 		FA0F7B6F2105CBC30028CF34 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1330;
 				ORGANIZATIONNAME = "Jarno Le Conté";
 				TargetAttributes = {
 					FA0F7B762105CBC30028CF34 = {
@@ -323,7 +349,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA0F7B762105CBC30028CF34 /* Plugin */,
+				FA0F7B762105CBC30028CF34 /* BeatSheetPlugin */,
 			);
 		};
 /* End PBXProject section */
@@ -390,6 +416,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -455,6 +482,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -481,6 +509,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_MODULE_NAME = Plugin;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "Common/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
@@ -489,19 +518,19 @@
 		FA0F7B7F2105CBC30028CF34 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.companyname.pluginname;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.squares.beatsheet.streamdeck;
 				PRODUCT_MODULE_NAME = Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_STYLE = "non-global";
+				STRIP_SWIFT_SYMBOLS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Common/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -511,19 +540,18 @@
 		FA0F7B802105CBC30028CF34 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.companyname.pluginname;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.squares.beatsheet.streamdeck;
 				PRODUCT_MODULE_NAME = Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_STYLE = "non-global";
+				STRIP_SWIFT_SYMBOLS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Common/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
@@ -541,7 +569,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA0F7B7E2105CBC30028CF34 /* Build configuration list for PBXNativeTarget "Plugin" */ = {
+		FA0F7B7E2105CBC30028CF34 /* Build configuration list for PBXNativeTarget "BeatSheetPlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA0F7B7F2105CBC30028CF34 /* Debug */,
