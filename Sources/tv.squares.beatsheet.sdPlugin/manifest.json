@@ -1,26 +1,42 @@
 {
   "Actions": [
     {
-      "Icon": "images/ActionIcon",
+      "Icon": "images/Next",
       "Name": "Next",
       "SupportedInMultiActions": true,
       "Tooltip": "Next card",
-      "UUID": "tv.squares.beatsheet.streamdeck.next"
+      "UUID": "tv.squares.beatsheet.streamdeck.next",
+      "States": [
+        {
+          "Image": "images/Next",
+          "FontSize": "12",
+          "TitleAlignment": "bottom",
+          "TitleColor": "#ffffff"
+        }
+      ]
     },
     {
-      "Icon": "images/ActionIcon",
+      "Icon": "images/Back",
       "Name": "Previous",
       "SupportedInMultiActions": true,
       "Tooltip": "Previous card",
-      "UUID": "tv.squares.beatsheet.streamdeck.previous"
+      "UUID": "tv.squares.beatsheet.streamdeck.previous",
+      "States": [
+        {
+          "Image": "images/Back",
+          "FontSize": "12",
+          "TitleAlignment": "bottom",
+          "TitleColor": "#ffffff"
+        }
+      ]
     }
   ],
   "SDKVersion": 2,
   "Author": "Michael Forrest",
   "CodePath": "BeatSheetPlugin",
   "Description": "Navigate Beat Sheet cards with your Stream Deck",
-  "Name": "Beat Sheet",
-  "Icon": "images/PluginIcon",
+  "Name": "BeatSheet",
+  "Icon": "images/BeatSheet",
   "URL": "https://github.com/goodtohear/streamdeck-template-swift",
   "Version": "1.0",
   "OS": [
@@ -29,6 +45,11 @@
         "MinimumVersion" : "10.11"
     }
   ],
+  "ApplicationsToMonitor": {
+      "mac": [
+        "tv.squares.BeatSheet"
+    ]
+  },
   "Software":
     {
         "MinimumVersion" : "4.3"

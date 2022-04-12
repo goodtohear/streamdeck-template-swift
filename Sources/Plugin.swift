@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cocoa
 
 public class Plugin: NSObject, ESDEventsProtocol {
     var connectionManager: ESDConnectionManager?;
@@ -19,6 +20,12 @@ public class Plugin: NSObject, ESDEventsProtocol {
     public func keyDown(forAction action: String, withContext context: Any, withPayload payload: [AnyHashable : Any], forDevice deviceID: String) {
         // Nothing to do
         print("Key down")
+        if action == "tv.squares.beatsheet.streamdeck.next"{
+            NSWorkspace.shared.open(URL(string:"beatsheet://next")!)
+        }
+        if action == "tv.squares.beatsheet.streamdeck.previous"{
+            NSWorkspace.shared.open(URL(string:"beatsheet://previous")!)
+        }
     }
     
     public func keyUp(forAction action: String, withContext context: Any, withPayload payload: [AnyHashable : Any], forDevice deviceID: String) {
@@ -44,7 +51,7 @@ public class Plugin: NSObject, ESDEventsProtocol {
     }
     
     public func applicationDidLaunch(_ applicationInfo: [AnyHashable : Any]) {
-        // Nothing to do
+        // Nothing to do`
     }
     
     public func applicationDidTerminate(_ applicationInfo: [AnyHashable : Any]) {

@@ -73,6 +73,7 @@
 		2B1E32A5235BB54C0082122F /* Plugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plugin-Bridging-Header.h"; sourceTree = "<group>"; };
 		2B1E32AA235BC1F80082122F /* Plugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
 		2B1E32AE235BCE8C0082122F /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		AC315B3428048F2D00147316 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ACCF11A928046320005F95AD /* tv.squares.beatsheet.sdPlugin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tv.squares.beatsheet.sdPlugin; sourceTree = "<group>"; };
 		FA0F7B772105CBC30028CF34 /* BeatSheetPlugin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BeatSheetPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA29E46E215E7D2300C9F60C /* ESDConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESDConnectionManager.m; sourceTree = "<group>"; };
@@ -144,6 +145,7 @@
 		FA0F7B6E2105CBC30028CF34 = {
 			isa = PBXGroup;
 			children = (
+				AC315B3428048F2D00147316 /* README.md */,
 				ACCF11A928046320005F95AD /* tv.squares.beatsheet.sdPlugin */,
 				2B1E32AA235BC1F80082122F /* Plugin.swift */,
 				FA29E46D215E7D2300C9F60C /* Common */,
