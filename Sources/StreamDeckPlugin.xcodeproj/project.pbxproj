@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		2B1E32AB235BC1F80082122F /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1E32AA235BC1F80082122F /* Plugin.swift */; };
 		2B1E32AF235BCE8C0082122F /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1E32AE235BCE8C0082122F /* utils.swift */; };
-		ACCF11AE280467F6005F95AD /* tv.squares.beatsheet.sdPlugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACCF11A928046320005F95AD /* tv.squares.beatsheet.sdPlugin */; };
-		ACCF11B028046846005F95AD /* BeatSheetPlugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA0F7B772105CBC30028CF34 /* BeatSheetPlugin */; };
+		AC674C16281AD6E100AE869E /* tv.squares.beatsheet.sdPlugin in Install to System */ = {isa = PBXBuildFile; fileRef = ACCF11A928046320005F95AD /* tv.squares.beatsheet.sdPlugin */; };
+		AC674C2D281AED7900AE869E /* BeatSheetPlugin in Copy binary into plugin */ = {isa = PBXBuildFile; fileRef = FA0F7B772105CBC30028CF34 /* BeatSheetPlugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FA29E473215E7D2300C9F60C /* ESDConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29E46E215E7D2300C9F60C /* ESDConnectionManager.m */; };
 		FA29E474215E7D2300C9F60C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29E46F215E7D2300C9F60C /* main.m */; };
 		FA80591421623A0D00ED7E12 /* ESDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FA80591321623A0D00ED7E12 /* ESDUtilities.m */; };
@@ -38,34 +38,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		ACCF11AB280467BC005F95AD /* CopyFiles */ = {
+		ACCF11AF28046833005F95AD /* Install to System */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "/Users/mf/Library/Application Support/com.elgato.StreamDeck/Plugins";
 			dstSubfolderSpec = 0;
 			files = (
-				ACCF11AE280467F6005F95AD /* tv.squares.beatsheet.sdPlugin in CopyFiles */,
+				AC674C16281AD6E100AE869E /* tv.squares.beatsheet.sdPlugin in Install to System */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ACCF11AF28046833005F95AD /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "/Users/mf/Library/Application Support/com.elgato.StreamDeck/Plugins/tv.squares.beatsheet.sdPlugin";
-			dstSubfolderSpec = 0;
-			files = (
-				ACCF11B028046846005F95AD /* BeatSheetPlugin in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA0F7B752105CBC30028CF34 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
+			name = "Install to System";
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		FA0F7B752105CBC30028CF34 /* Copy binary into plugin */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "/Users/mf/code/beatsheet/streamdeck-plugin/Sources/tv.squares.beatsheet.sdPlugin";
+			dstSubfolderSpec = 0;
+			files = (
+				AC674C2D281AED7900AE869E /* BeatSheetPlugin in Copy binary into plugin */,
+			);
+			name = "Copy binary into plugin";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -74,6 +67,7 @@
 		2B1E32AA235BC1F80082122F /* Plugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
 		2B1E32AE235BCE8C0082122F /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		AC315B3428048F2D00147316 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AC674C2C281AEB7100AE869E /* BeatSheetPlugin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeatSheetPlugin.entitlements; sourceTree = "<group>"; };
 		ACCF11A928046320005F95AD /* tv.squares.beatsheet.sdPlugin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tv.squares.beatsheet.sdPlugin; sourceTree = "<group>"; };
 		FA0F7B772105CBC30028CF34 /* BeatSheetPlugin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BeatSheetPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA29E46E215E7D2300C9F60C /* ESDConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESDConnectionManager.m; sourceTree = "<group>"; };
@@ -145,6 +139,7 @@
 		FA0F7B6E2105CBC30028CF34 = {
 			isa = PBXGroup;
 			children = (
+				AC674C2C281AEB7100AE869E /* BeatSheetPlugin.entitlements */,
 				AC315B3428048F2D00147316 /* README.md */,
 				ACCF11A928046320005F95AD /* tv.squares.beatsheet.sdPlugin */,
 				2B1E32AA235BC1F80082122F /* Plugin.swift */,
@@ -311,9 +306,9 @@
 			buildPhases = (
 				FA0F7B732105CBC30028CF34 /* Sources */,
 				FA0F7B742105CBC30028CF34 /* Frameworks */,
-				FA0F7B752105CBC30028CF34 /* CopyFiles */,
-				ACCF11AB280467BC005F95AD /* CopyFiles */,
-				ACCF11AF28046833005F95AD /* CopyFiles */,
+				FA0F7B752105CBC30028CF34 /* Copy binary into plugin */,
+				AC674C26281ADA8800AE869E /* Package Plugin */,
+				ACCF11AF28046833005F95AD /* Install to System */,
 			);
 			buildRules = (
 			);
@@ -331,7 +326,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1330;
-				ORGANIZATIONNAME = "Jarno Le Conté";
+				ORGANIZATIONNAME = "Good To Hear";
 				TargetAttributes = {
 					FA0F7B762105CBC30028CF34 = {
 						CreatedOnToolsVersion = 10.0;
@@ -355,6 +350,27 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC674C26281ADA8800AE869E /* Package Plugin */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Package Plugin";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm /Users/mf/code/beatsheet/BeatSheet/tv.squares.beatsheet.streamDeckPlugin\n\nDistributionTool -b -i /Users/mf/code/beatsheet/streamdeck-plugin/Sources/tv.squares.beatsheet.sdPlugin  -o ~/code/beatsheet/BeatSheet/\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA0F7B732105CBC30028CF34 /* Sources */ = {
@@ -520,16 +536,21 @@
 		FA0F7B7F2105CBC30028CF34 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BeatSheetPlugin.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TNRLJ4WU59;
+				ENABLE_HARDENED_RUNTIME = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tv.squares.beatsheet.streamdeck;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.squares.BeatSheet.streamdeck;
 				PRODUCT_MODULE_NAME = Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = "non-global";
 				STRIP_SWIFT_SYMBOLS = NO;
@@ -542,15 +563,20 @@
 		FA0F7B802105CBC30028CF34 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = BeatSheetPlugin.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TNRLJ4WU59;
+				ENABLE_HARDENED_RUNTIME = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tv.squares.beatsheet.streamdeck;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.squares.BeatSheet.streamdeck;
 				PRODUCT_MODULE_NAME = Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = "non-global";
 				STRIP_SWIFT_SYMBOLS = NO;

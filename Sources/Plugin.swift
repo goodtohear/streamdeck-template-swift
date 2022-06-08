@@ -51,7 +51,7 @@ public class Plugin: NSObject, ESDEventsProtocol {
     }
     
     public func applicationDidLaunch(_ applicationInfo: [AnyHashable : Any]) {
-        // Nothing to do`
+        // Nothing to do
     }
     
     public func applicationDidTerminate(_ applicationInfo: [AnyHashable : Any]) {

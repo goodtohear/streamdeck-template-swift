@@ -17,7 +17,7 @@
     },
     {
       "Icon": "images/Back",
-      "Name": "Previous",
+      "Name": "Back",
       "SupportedInMultiActions": true,
       "Tooltip": "Previous card",
       "UUID": "tv.squares.beatsheet.streamdeck.previous",
@@ -35,10 +35,10 @@
   "Author": "Michael Forrest",
   "CodePath": "BeatSheetPlugin",
   "Description": "Navigate Beat Sheet cards with your Stream Deck",
-  "Name": "BeatSheet",
+  "Name": "Beat Sheet",
   "Icon": "images/BeatSheet",
-  "URL": "https://github.com/goodtohear/streamdeck-template-swift",
-  "Version": "1.0",
+  "URL": "https://squares.tv/beatsheet",
+  "Version": "0.4",
   "OS": [
     {
         "Platform": "mac",
