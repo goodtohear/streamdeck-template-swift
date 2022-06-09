@@ -10,7 +10,6 @@
 		2B1E32AB235BC1F80082122F /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1E32AA235BC1F80082122F /* Plugin.swift */; };
 		2B1E32AF235BCE8C0082122F /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1E32AE235BCE8C0082122F /* utils.swift */; };
 		AC674C16281AD6E100AE869E /* tv.squares.beatsheet.sdPlugin in Install to System */ = {isa = PBXBuildFile; fileRef = ACCF11A928046320005F95AD /* tv.squares.beatsheet.sdPlugin */; };
-		AC674C2D281AED7900AE869E /* BeatSheetPlugin in Copy binary into plugin */ = {isa = PBXBuildFile; fileRef = FA0F7B772105CBC30028CF34 /* BeatSheetPlugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FA29E473215E7D2300C9F60C /* ESDConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29E46E215E7D2300C9F60C /* ESDConnectionManager.m */; };
 		FA29E474215E7D2300C9F60C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29E46F215E7D2300C9F60C /* main.m */; };
 		FA80591421623A0D00ED7E12 /* ESDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FA80591321623A0D00ED7E12 /* ESDUtilities.m */; };
@@ -48,17 +47,6 @@
 			);
 			name = "Install to System";
 			runOnlyForDeploymentPostprocessing = 1;
-		};
-		FA0F7B752105CBC30028CF34 /* Copy binary into plugin */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "/Users/mf/code/beatsheet/streamdeck-plugin/Sources/tv.squares.beatsheet.sdPlugin";
-			dstSubfolderSpec = 0;
-			files = (
-				AC674C2D281AED7900AE869E /* BeatSheetPlugin in Copy binary into plugin */,
-			);
-			name = "Copy binary into plugin";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -306,8 +294,6 @@
 			buildPhases = (
 				FA0F7B732105CBC30028CF34 /* Sources */,
 				FA0F7B742105CBC30028CF34 /* Frameworks */,
-				FA0F7B752105CBC30028CF34 /* Copy binary into plugin */,
-				AC674C26281ADA8800AE869E /* Package Plugin */,
 				ACCF11AF28046833005F95AD /* Install to System */,
 			);
 			buildRules = (
@@ -350,27 +336,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		AC674C26281ADA8800AE869E /* Package Plugin */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Package Plugin";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "rm /Users/mf/code/beatsheet/BeatSheet/tv.squares.beatsheet.streamDeckPlugin\n\nDistributionTool -b -i /Users/mf/code/beatsheet/streamdeck-plugin/Sources/tv.squares.beatsheet.sdPlugin  -o ~/code/beatsheet/BeatSheet/\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA0F7B732105CBC30028CF34 /* Sources */ = {
@@ -537,8 +502,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = BeatSheetPlugin.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = TNRLJ4WU59;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -547,6 +512,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = tv.squares.BeatSheet.streamdeck;
 				PRODUCT_MODULE_NAME = Plugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -564,8 +530,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = BeatSheetPlugin.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = TNRLJ4WU59;
 				ENABLE_HARDENED_RUNTIME = YES;
 				LD_RUNPATH_SEARCH_PATHS = (

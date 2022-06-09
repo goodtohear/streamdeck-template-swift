@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1330"
-   version = "1.3">
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -74,5 +74,23 @@
    <ArchiveAction
       buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Package Stream Deck Plugin"
+               scriptText = "exec &gt; /tmp/xcode_build.log 2&gt;&amp;1&#10;# see https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution/customizing_the_notarization_workflow/customizing_the_xcode_archive_process&#10;EXPORT_UUID=`uuidgen`&#10;EXPORT_PATH=&quot;/tmp/$PRODUCT_NAME-$EXPORT_UUID/&quot;&#10;/usr/bin/osascript -e &apos;display notification &quot;Exporting application archive&#x2026;&quot; with title &quot;Submitting app for notarization&quot;&apos;&#10;&#10;echo &quot;SRCROOT:&quot;&#10;echo $SRCROOT&#10;echo &quot;ARCHIVE PATH:&quot;&#10;echo $ARCHIVE_PATH&#10;echo &quot;EXPORT PATH&quot;&#10;echo $EXPORT_PATH&#10;# Ask xcodebuild(1) to export the app. Use the export options&#10;# from a previous manual export that used a Developer ID.&#10;# /usr/bin/xcodebuild -exportArchive -archivePath &quot;$ARCHIVE_PATH&quot; -exportOptionsPlist &quot;$SRCROOT/ExportOptions.plist&quot; -exportPath &quot;$EXPORT_PATH&quot;&#10;&#10;BIN_PATH=&quot;$ARCHIVE_PATH/Products/usr/local/bin/BeatSheetPlugin&quot;&#10;echo &quot;Copy from&quot;&#10;echo $BIN_PATH&#10;cp &quot;$BIN_PATH&quot; ${PROJECT_DIR}/tv.squares.beatsheet.sdPlugin/&#10;rm /Users/mf/code/beatsheet/BeatSheet/tv.squares.beatsheet.streamDeckPlugin&#10;&#10;DistributionTool -b -i /Users/mf/code/beatsheet/streamdeck-plugin/Sources/tv.squares.beatsheet.sdPlugin  -o ~/code/beatsheet/BeatSheet/&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "FA0F7B762105CBC30028CF34"
+                     BuildableName = "BeatSheetPlugin"
+                     BlueprintName = "BeatSheetPlugin"
+                     ReferencedContainer = "container:StreamDeckPlugin.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
    </ArchiveAction>
 </Scheme>
